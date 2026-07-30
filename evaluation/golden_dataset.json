@@ -1,1 +1,146 @@
-[]
+[
+  {
+    "question": "What knowledge base do reasonableness monitors use for monitoring machine perception?",
+    "ground_truth": "ConceptNet 5 (Speer and Havasi 2013) is used as the knowledge base of reasonableness. Monitors search through the knowledge base for premises and generate explanations of inconsistencies.",
+    "source_doc": "17361-77195-1-PB.pdf",
+    "source_page": 0
+  },
+  {
+    "question": "What are the two types of reasonableness monitors, and what does each one do?",
+    "ground_truth": "Local monitors dynamically check the behavior of a specific subsystem, and non-local reasonableness monitors monitor committees of subsystems for plausibility (reasonableness) in context.",
+    "source_doc": "17361-77195-1-PB.pdf",
+    "source_page": 0
+  },
+  {
+    "question": "Why is the perception 'a mailbox crossing the street' judged unreasonable?",
+    "ground_truth": "Because mailboxes are heavy, inanimate objects found at the sidewalk of a street that do not move on their own.",
+    "source_doc": "17361-77195-1-PB.pdf",
+    "source_page": 0
+  },
+  {
+    "question": "What premise makes 'a mailbox crossing the street' reasonable, and what does adding it displace?",
+    "ground_truth": "Adding the premise (mailbox in hurricane, move, plausible) takes precedent and causes the (mailbox, moves, false) premise to be removed, so the system explains the perception as reasonable during a hurricane.",
+    "source_doc": "17361-77195-1-PB.pdf",
+    "source_page": 1
+  },
+  {
+    "question": "What human structure inspired the methodology for monitoring non-local inconsistencies?",
+    "ground_truth": "The structure of successful human organizations, where tasks are accomplished by committees of multiple people. Committees survive bad work by any single member because members observe each other's work and can jointly decide to correct bad work or remove misbehaving members.",
+    "source_doc": "17361-77195-1-PB.pdf",
+    "source_page": 0
+  },
+  {
+    "question": "In the proof-of-concept, which premise takes precedence when there are inconsistencies?",
+    "ground_truth": "The most recently added premise takes precedent.",
+    "source_doc": "17361-77195-1-PB.pdf",
+    "source_page": 1
+  },
+  {
+    "question": "Which two datasets were used to evaluate the classifiers, and how many samples does each have?",
+    "ground_truth": "The mushroom dataset with more than 8100 samples and 22 categories, split into 6499 training, 812 development, and 813 test samples; and the voting records dataset with 435 samples and 16 categories, split into 348 training, 43 development, and 44 test samples.",
+    "source_doc": "CSE_142_HW (1).pdf",
+    "source_page": 0
+  },
+  {
+    "question": "What accuracy did Naive Bayes achieve on the mushroom dataset with no smoothing?",
+    "ground_truth": "With smoothing of 0.0 the training accuracy was 99.77 percent, the development accuracy 99.88 percent, and the test accuracy 99.26 percent. This was the best performing configuration.",
+    "source_doc": "CSE_142_HW (1).pdf",
+    "source_page": 0
+  },
+  {
+    "question": "How did increasing the smoothing parameter affect Naive Bayes performance?",
+    "ground_truth": "Performance slightly decreases as smoothing increases. Test accuracy falls from 99.26 percent at smoothing 0.0 to 93.97 percent at smoothing 5.0.",
+    "source_doc": "CSE_142_HW (1).pdf",
+    "source_page": 0
+  },
+  {
+    "question": "What depth and how many leaves did the decision tree converge to on the mushroom dataset, and what was the root node?",
+    "ground_truth": "The tree converged to depth 4 with 24 leaves, and odor was the root node. Odor is a reliable indicator of mushroom toxicity.",
+    "source_doc": "CSE_142_HW (1).pdf",
+    "source_page": 1
+  },
+  {
+    "question": "How many misclassifications did the confusion matrix show on the mushroom test set?",
+    "ground_truth": "6 misclassifications out of 813 test samples.",
+    "source_doc": "CSE_142_HW (1).pdf",
+    "source_page": 1
+  },
+  {
+    "question": "Which feature was most important for classifying the voting records dataset?",
+    "ground_truth": "The physician fee freeze.",
+    "source_doc": "CSE_142_HW (1).pdf",
+    "source_page": 1
+  },
+  {
+    "question": "How did shuffling the data affect performance on the voting records dataset?",
+    "ground_truth": "For the voting data, shuffling decreased Naive Bayes performance while improving the performance of the decision tree.",
+    "source_doc": "CSE_142_HW (1).pdf",
+    "source_page": 2
+  },
+  {
+    "question": "What is the governing function for the probability of fire propagating to adjacent cells, and what do its terms represent?",
+    "ground_truth": "Pprop = 1 - (1 - P)^n, where P represents the base probability of propagation and n is the number of adjacent fires.",
+    "source_doc": "Fire_Propagation_with_Slope_Methodology.pdf",
+    "source_page": 0
+  },
+  {
+    "question": "How does slope change the fire propagation probability in the step function?",
+    "ground_truth": "The initial probability for a starting cell is p=0.4. If the slope is 0 the probability remains constant, if the slope is positive the probability increases by 0.1, and if the slope is negative the probability decreases by 0.1.",
+    "source_doc": "Fire_Propagation_with_Slope_Methodology.pdf",
+    "source_page": 0
+  },
+  {
+    "question": "What size elevation matrix is used, and what equation calculates slope?",
+    "ground_truth": "A 2D 29 by 29 elevation matrix E(i,j), where each cell represents a specific elevation value. Slope is calculated as s = E(i1, j1) - E(i0, j0).",
+    "source_doc": "Fire_Propagation_with_Slope_Methodology.pdf",
+    "source_page": 1
+  },
+  {
+    "question": "Which factors does the fire propagation model explicitly not account for?",
+    "ground_truth": "The model does not account for wind, vegetation, and other external factors, and does not consider oxygen levels at higher altitudes or elevation.",
+    "source_doc": "Fire_Propagation_with_Slope_Methodology.pdf",
+    "source_page": 0
+  },
+  {
+    "question": "In the 3x3 test matrix, what propagation probabilities apply to the top, middle, and bottom rows?",
+    "ground_truth": "The top three cells have positive slope and a propagation probability of 0.5, the middle cells have zero slope and stay at 0.4, and the bottom three cells have negative slope and a probability of 0.3.",
+    "source_doc": "Fire_Propagation_with_Slope_Methodology.pdf",
+    "source_page": 1
+  },
+  {
+    "question": "What degree programs and universities appear in the resume?",
+    "ground_truth": "A Master of Science in Computer Engineering at New York University, expected Dec 2027, and an Applied Mathematics major with a Computer Science minor at the University of California Santa Cruz, expected Jun 2026.",
+    "source_doc": "resume_masters (17).pdf",
+    "source_page": 0
+  },
+  {
+    "question": "What backend and API technologies are listed under technical skills?",
+    "ground_truth": "FastAPI (REST APIs/OpenAPI), Firebase (NoSQL/real-time), PostgreSQL, and BigQuery (SQL).",
+    "source_doc": "resume_masters (17).pdf",
+    "source_page": 0
+  },
+  {
+    "question": "What was built in the Smart Realtor project and what improvement did it achieve?",
+    "ground_truth": "An AI copilot prototype with a LangChain RAG pipeline integrating LLM API calls, vector databases, and semantic search, with FastAPI REST endpoints and a PostgreSQL backend. It achieved a 20% improvement in prediction accuracy.",
+    "source_doc": "resume_masters (17).pdf",
+    "source_page": 0
+  },
+  {
+    "question": "Which GPU or CUDA hardware was used to train the classifiers?",
+    "ground_truth": "I don't have enough information to answer that based on the provided documents.",
+    "source_doc": null,
+    "source_page": null
+  },
+  {
+    "question": "What is the candidate's GPA?",
+    "ground_truth": "I don't have enough information to answer that based on the provided documents.",
+    "source_doc": null,
+    "source_page": null
+  },
+  {
+    "question": "What wind speed threshold does the reasonableness monitor use to validate perceptions?",
+    "ground_truth": "I don't have enough information to answer that based on the provided documents.",
+    "source_doc": null,
+    "source_page": null
+  }
+]
